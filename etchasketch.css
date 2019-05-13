@@ -3,7 +3,7 @@
 }
 
 body {
-	background-color: firebrick;
+	background-color: #8b0000;
 }
 
 h1{ 
@@ -13,4 +13,39 @@ h1{
 	position: absolute;
 	left: 50%;
 	transform: translate(-50%, 0%);
+}
+
+#buttonset {
+	position: absolute;
+	bottom: 20px;
+	font-family: Helvetica, sans-serif;
+	color: #f7e7c7;
+	/*height: %;*/
+}
+
+#drawingContainer {
+	border-color: "black";
+}
+
+button {
+	background-color: #f7e7c7;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px; 
+	font-size: 16px;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: #999;
+	border: 0px;
+	border-radius: 3px;
+	padding: 5px; 
+	font-size: 16px;
+	font-weight: bold;
+}
+
+input {
+	background-color: #f7e7c7;
+	font-size: 15px
 }

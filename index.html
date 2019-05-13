@@ -7,12 +7,21 @@
 </head>
 <body>
 	<h1>Etch-a-Sketch</h1>
-	<br>
 	<div id="drawingContainer"></div>
+	<div id="buttonset">
+		<p id="directions">Please enter the number of pixels<br> per side your Etch-a-Sketch drawing<br>area will take on. (Min:1, Max:70)</p>
+		<input id="pixelInput" type="number" name="Number of pixels">
+		<button id="submitButton" onclick="makeDrawingPad()">Submit</button>
+	</div>
 	<script type="text/javascript">
-		var size = prompt("Please enter the number of pixels per side your Etch-a-Sketch drawing area will take on. (Min:1, Max:70)", "30");
-		var sizeToUse = parseFloat(size)<1 ? 1 : parseFloat(size)>70 ? 70 : parseFloat(size);
-		makeSquaresInDrawingPad("drawingContainer", sizeToUse);
+		function makeDrawingPad(){
+			document.getElementById("drawingContainer").innerHTML="";
+			var size = parseFloat(document.getElementById("pixelInput").value);
+			var sizeToUse = size<1 ? 1 : size>70 ? 70 : size;
+			makeSquaresInDrawingPad("drawingContainer", sizeToUse);
+			document.getElementById("submitButton").innerHTML = "Reset Drawing";
+			document.getElementById("directions").innerHTML = "";
+		} 
 	</script>
 </body>
 </html>
