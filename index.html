@@ -7,9 +7,12 @@
 </head>
 <body>
 	<h1>Etch-a-Sketch</h1>
+	<br>
 	<div id="drawingContainer"></div>
 	<script type="text/javascript">
-		makeSquaresInDrawingPad("drawingContainer", 64);
+		var size = prompt("Please enter the number of pixels per side your Etch-a-Sketch drawing area will take on. (Min:1, Max:70)", "30");
+		var sizeToUse = parseFloat(size)<1 ? 1 : parseFloat(size)>70 ? 70 : parseFloat(size);
+		makeSquaresInDrawingPad("drawingContainer", sizeToUse);
 	</script>
 </body>
 </html>
