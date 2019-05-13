@@ -1,0 +1,7 @@
+.etchSquare:hover {
+	background-color: black;
+	/*transition-duration: 1s;*/
+}
+.etchSquare {
+	background-color: yellow;
+}
